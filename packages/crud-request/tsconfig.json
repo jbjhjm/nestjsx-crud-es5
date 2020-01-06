@@ -1,9 +1,12 @@
 {
   "extends": "../../tsconfig.json",
+  "target":"es5",
   "compilerOptions": {
+	"module": "commonjs",
     "rootDir": "src",
-    "outDir": "lib"
+	"outDir": "lib",
   },
+  "lib": ["es5","es6","es2018"],
   "include": ["src"],
   "exclude": ["lib"],
   "references": [{ "path": "../util" }]

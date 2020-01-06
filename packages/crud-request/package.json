@@ -1,53 +1,64 @@
 {
-  "name": "@nestjsx/crud-request",
-  "description": "NestJs CRUD for RESTful APIs - request query builder",
-  "version": "4.4.1",
-  "license": "MIT",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nestjsx/crud.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nestjsx/crud/issues"
-  },
-  "keywords": [
-    "typescript",
-    "typeorm",
-    "nest",
-    "nestjs",
-    "rest",
-    "restful",
-    "api",
-    "crud",
-    "crud-generator",
-    "http",
-    "request",
-    "request-query",
-    "requestquery",
-    "get",
-    "query",
-    "query-string",
-    "querystring",
-    "query-builder",
-    "querybuilder"
-  ],
-  "author": {
-    "name": "Michael Yali",
-    "email": "mihon4ik@gmail.com"
-  },
-  "scripts": {
-    "build": "npx tsc -b"
-  },
-  "dependencies": {
-    "@nestjsx/util": "^4.4.1",
-    "qs": "^6.8.0"
-  }
+		"name": "@nestjsx/crud-request",
+		"description": "NestJs CRUD for RESTful APIs - request query builder",
+		"version": "4.4.1",
+		"license": "MIT",
+		"main": "lib/index.js",
+		"typings": "lib/index.d.ts",
+		"publishConfig": {
+				"access": "public"
+		},
+		"files": [
+				"lib"
+		],
+		"repository": {
+				"type": "git",
+				"url": "https://github.com/nestjsx/crud.git"
+		},
+		"bugs": {
+				"url": "https://github.com/nestjsx/crud/issues"
+		},
+		"keywords": [
+				"typescript",
+				"typeorm",
+				"nest",
+				"nestjs",
+				"rest",
+				"restful",
+				"api",
+				"crud",
+				"crud-generator",
+				"http",
+				"request",
+				"request-query",
+				"requestquery",
+				"get",
+				"query",
+				"query-string",
+				"querystring",
+				"query-builder",
+				"querybuilder"
+		],
+		"author": {
+				"name": "Michael Yali",
+				"email": "mihon4ik@gmail.com"
+		},
+		"scripts": {
+				"build": "npm run build:types && npm run build:js",
+				"babel": "./node_modules/.bin/babel --out-dir lib src",
+				"build:types": "tsc --emitDeclarationOnly",
+				"build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+		},
+		"dependencies": {
+				"@nestjsx/util": "^4.4.1",
+				"qs": "^6.8.0"
+		},
+		"devDependencies": {
+				"@babel/cli": "^7.7.7",
+				"@babel/core": "^7.7.7",
+				"@babel/plugin-proposal-class-properties": "^7.7.4",
+				"@babel/plugin-proposal-object-rest-spread": "^7.7.7",
+				"@babel/preset-env": "^7.7.7",
+				"@babel/preset-typescript": "^7.7.7"
+		}
 }
